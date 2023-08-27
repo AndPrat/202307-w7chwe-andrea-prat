@@ -4,7 +4,5 @@ import { handlers } from "./handlers";
 export const server = setupServer(...handlers);
 
 beforeAll(() => server.listen());
-
 afterEach(() => server.resetHandlers(...handlers));
-
 afterAll(() => server.close());

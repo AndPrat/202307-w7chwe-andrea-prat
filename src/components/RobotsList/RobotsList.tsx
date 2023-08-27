@@ -2,7 +2,7 @@ import { useAppSelector } from "../../store";
 import RobotCard from "../RobotCard/RobotCard";
 
 const RobotsList = (): React.ReactElement => {
-  const robots = useAppSelector(({ robotsStore: { robots } }) => robots);
+  const robots = useAppSelector(({ robotsState: { robots } }) => robots);
 
   return (
     <ul className="robots-list">

@@ -7,7 +7,7 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { robotsReducer } from "./robots/robotsSlice";
 
 const rootReducer = combineReducers({
-  robotsStore: robotsReducer,
+  robotsState: robotsReducer,
 });
 
 export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
