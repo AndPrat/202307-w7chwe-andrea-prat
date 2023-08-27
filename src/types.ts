@@ -3,5 +3,5 @@ export interface Robot {
   name: string;
   image: string;
   speed: number;
-  endurance: number;
+  endurace: number;
 }
