@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useRobotsApi from "../hooks/useRobotsApi";
 import { useAppDispatch } from "../store";
 import { loadRobotsActionCreator } from "../store/robots/robotsSlice";
+import "./RobotsListPage.css";
 
 const RobotsLitsPage = (): React.ReactElement => {
   const dispatch = useAppDispatch();

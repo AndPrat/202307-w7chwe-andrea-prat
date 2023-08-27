@@ -9,7 +9,7 @@ describe("Given a RobotCard component", () => {
     test("Then it should show the name 'Wall-e' inside a heading", () => {
       const expectedHeaderText = "Wall-e";
       const store = setupStore({
-        robotsStore: {
+        robotsState: {
           robots: robotsMock,
         },
       });
