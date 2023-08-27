@@ -1,5 +1,6 @@
 import React from "react";
 import { Robot } from "../../types";
+import "./RobotCard.css";
 
 export interface RobotCardProps {
   robot: Robot;
