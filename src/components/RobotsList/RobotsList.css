@@ -1,0 +1,23 @@
+.robots-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.robots-list__robot {
+  width: 100%;
+  padding: 0 12px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .robots-list__robot {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .robots-list__robot {
+    width: 25%;
+  }
+}
