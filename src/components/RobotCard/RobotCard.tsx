@@ -9,11 +9,14 @@ export interface RobotCardProps {
 const RobotCard = ({
   robot: { name, image, speed, endurance },
 }: RobotCardProps): React.ReactElement => {
+  const imagePath = image.substring(0, 50);
+  const imageId = image.substring(62);
+  const processedImage = `${imagePath}w_500,f_auto/${imageId}`;
   return (
     <article className="robot">
       <picture className="robot__picture">
         <img
-          src={image}
+          src={processedImage}
           alt={`${name} robot`}
           width="200"
           height="200"
