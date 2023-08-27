@@ -1,25 +1,31 @@
 import axios from "axios";
 import { useCallback } from "react";
-import { Robot } from "../types";
-
-export const apiUrl = import.meta.env.VITE_API_URL;
+import { Robot, RobotApi } from "../types";
 
 const useRobotsApi = () => {
-  const getRobots = useCallback(async (): Promise<Robot[]> => {
-    const { data: apiRobots } = await axios.get<Robot[]>(`${apiUrl}/robots`);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
-    const robots = apiRobots.map<Robot>(
-      ({ id, name, image, speed, endurace }) => ({
-        id,
-        name,
-        image,
-        speed,
-        endurace,
-      }),
-    );
+  const getRobots = useCallback(async () => {
+    try {
+      const { data: apiRobots } = await axios.get<{ robots: RobotApi[] }>(
+        `${apiUrl}/robots`,
+      );
 
-    return robots;
-  }, []);
+      const robots = apiRobots.robots.map<Robot>(
+        ({ _id, name, image, speed, endurance }) => ({
+          id: _id,
+          name,
+          image,
+          speed,
+          endurance,
+        }),
+      );
+
+      return robots;
+    } catch {
+      throw new Error("Couldn't load robots");
+    }
+  }, [apiUrl]);
 
   return { getRobots };
 };
