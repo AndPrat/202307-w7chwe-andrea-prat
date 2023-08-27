@@ -26,7 +26,7 @@ const RobotCard = ({
       <h2 className="robot__name">{name}</h2>
       <ul className="robot__list">
         <li className="robot__data">Speed: {speed}</li>
-        <li className="robot__data">Endurace: {endurance}</li>
+        <li className="robot__data">Endurance: {endurance}</li>
       </ul>
     </article>
   );
