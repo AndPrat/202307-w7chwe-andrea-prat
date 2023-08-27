@@ -6,7 +6,7 @@ export interface RobotCardProps {
 }
 
 const RobotCard = ({
-  robot: { name, image, speed, endurace },
+  robot: { name, image, speed, endurance },
 }: RobotCardProps): React.ReactElement => {
   return (
     <article className="robot">
@@ -22,7 +22,7 @@ const RobotCard = ({
       <h2 className="robot__name">{name}</h2>
       <ul className="robot__list">
         <li className="robot__data">Speed: {speed}</li>
-        <li className="robot__data">Endurace: {endurace}</li>
+        <li className="robot__data">Endurace: {endurance}</li>
       </ul>
     </article>
   );

@@ -1,7 +1,15 @@
 export interface Robot {
-  id: number;
+  id: string;
   name: string;
   image: string;
   speed: number;
-  endurace: number;
+  endurance: number;
+}
+
+export interface RobotsApi {
+  robots: RobotApi[];
+}
+
+export interface RobotApi extends Omit<Robot, "id"> {
+  _id: string;
 }
