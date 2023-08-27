@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
+    "@fontsource/share-tech-mono": "^5.0.8",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.5.0",
     "react": "^18.2.0",
