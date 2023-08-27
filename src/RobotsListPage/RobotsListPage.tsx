@@ -3,8 +3,9 @@ import useRobotsApi from "../hooks/useRobotsApi";
 import { useAppDispatch } from "../store";
 import { loadRobotsActionCreator } from "../store/robots/robotsSlice";
 import "./RobotsListPage.css";
+import RobotsList from "../components/RobotsList/RobotsList";
 
-const RobotsLitsPage = (): React.ReactElement => {
+const RobotsListPage = (): React.ReactElement => {
   const dispatch = useAppDispatch();
   const { getRobots } = useRobotsApi();
 
@@ -18,9 +19,9 @@ const RobotsLitsPage = (): React.ReactElement => {
 
   return (
     <>
-      <h2 className="robots__list">Robots list</h2>
+      <RobotsList />
     </>
   );
 };
 
-export default RobotsLitsPage;
+export default RobotsListPage;

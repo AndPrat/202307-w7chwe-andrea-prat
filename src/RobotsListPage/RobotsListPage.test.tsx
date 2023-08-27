@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { robotsMock } from "../mocks/robotMocks";
 import { setupStore } from "../store";
-import RobotsLitsPage from "./RobotsListPage";
+import RobotsListPage from "./RobotsListPage";
 
 describe("Given a RobotsListPage component", () => {
   describe("When it is rendered", () => {
@@ -16,7 +16,7 @@ describe("Given a RobotsListPage component", () => {
 
       render(
         <Provider store={store}>
-          <RobotsLitsPage />
+          <RobotsListPage />
         </Provider>,
       );
 
