@@ -9,12 +9,12 @@ const useRobotsApi = () => {
     const { data: apiRobots } = await axios.get<Robot[]>(`${apiUrl}/robots`);
 
     const robots = apiRobots.map<Robot>(
-      ({ id, name, image, speed, endurance }) => ({
+      ({ id, name, image, speed, endurace }) => ({
         id,
         name,
         image,
         speed,
-        endurance,
+        endurace,
       }),
     );
 
