@@ -1,9 +1,9 @@
 import { useEffect } from "react";
+import RobotsList from "../components/RobotsList/RobotsList";
 import useRobotsApi from "../hooks/useRobotsApi";
 import { useAppDispatch } from "../store";
 import { loadRobotsActionCreator } from "../store/robots/robotsSlice";
 import "./RobotsListPage.css";
-import RobotsList from "../components/RobotsList/RobotsList";
 
 const RobotsListPage = (): React.ReactElement => {
   const dispatch = useAppDispatch();
