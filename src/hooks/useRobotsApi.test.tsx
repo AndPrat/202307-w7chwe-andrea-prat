@@ -1,8 +1,8 @@
 import { renderHook } from "@testing-library/react";
-import useRobotsApi from "./useRobotsApi";
-import { robotsMock } from "../mocks/robotMocks";
 import { errorHandlers } from "../mocks/handlers";
+import { robotsMock } from "../mocks/robotMocks";
 import { server } from "../mocks/server";
+import useRobotsApi from "./useRobotsApi";
 
 describe("Given a function getRobots", () => {
   describe("When the function is called", () => {
@@ -21,15 +21,17 @@ describe("Given a function getRobots", () => {
 
   test("Then it should throw an error 'Couldn't load user' when rejecting", () => {
     server.resetHandlers(...errorHandlers);
+
     const expectedError = new Error("Couldn't load robots");
+
     const {
       result: {
         current: { getRobots },
       },
     } = renderHook(() => useRobotsApi());
 
-    const reobotsPromise = getRobots();
+    const robots = getRobots();
 
-    expect(reobotsPromise).rejects.toThrowError(expectedError);
+    expect(robots).rejects.toThrowError(expectedError);
   });
 });
