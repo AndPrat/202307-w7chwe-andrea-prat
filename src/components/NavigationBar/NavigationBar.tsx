@@ -11,6 +11,11 @@ const NavigationBar = (): React.ReactElement => {
             Home
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/create-robot" className="navigation__create">
+            Create
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
