@@ -53,8 +53,9 @@ button {
 button,
 input {
   font-family: inherit;
-  color: transparent;
+  background-color: transparent;
   border: none;
+  color: rgb(12, 53, 107);
 }
 
 .container {
