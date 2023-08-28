@@ -1,0 +1,14 @@
+.navigation {
+  margin-top: 30px;
+}
+
+.navigation__home {
+  font-size: 1.4rem;
+}
+
+.navigation__home.active {
+  text-decoration: underline;
+  color: #fff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
