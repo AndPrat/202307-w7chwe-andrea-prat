@@ -27,7 +27,25 @@ const useRobotsApi = () => {
     }
   }, [apiUrl]);
 
-  return { getRobots };
+  const addRobot = async (newRobot: Omit<Robot, "_id">) => {
+    try {
+      const { data } = await axios.post<{ robot: Robot }>(
+        `${apiUrl}/robots`,
+        newRobot,
+      );
+
+      const { robot } = data;
+
+      return robot;
+    } catch (error) {
+      throw new Error("Couldn't create a robot");
+    }
+  };
+
+  return {
+    getRobots,
+    addRobot,
+  };
 };
 
 export default useRobotsApi;
