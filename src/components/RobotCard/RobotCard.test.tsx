@@ -8,6 +8,7 @@ describe("Given a RobotCard component", () => {
   describe("When it receives a robot name 'Wall-e'", () => {
     test("Then it should show the name 'Wall-e' inside a heading", () => {
       const expectedHeaderText = "Wall-e";
+
       const store = setupStore({
         robotsState: {
           robots: robotsMock,
