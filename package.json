@@ -14,19 +14,15 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@fontsource/share-tech-mono": "^5.0.8",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.5.0",
-    "development": "^0.0.6",
     "firebase": "^10.3.0",
-    "kit": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-redux": "^8.1.2",
-    "react-router-dom": "^6.15.0",
-    "software": "^0.0.1"
+    "react-router-dom": "^6.15.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
