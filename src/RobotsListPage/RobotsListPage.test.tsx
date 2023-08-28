@@ -8,6 +8,7 @@ describe("Given a RobotsListPage component", () => {
   describe("When it is rendered", () => {
     test("Then it should show a heading with the text 'Robots list'", () => {
       const expectedHeadingText = "Robots list";
+
       const store = setupStore({
         robotsState: {
           robots: robotsMock,
